@@ -12,6 +12,9 @@
 		538FE88222CA9BA6005A3836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538FE88122CA9BA6005A3836 /* Assets.xcassets */; };
 		538FE88522CA9BA6005A3836 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 538FE88322CA9BA6005A3836 /* LaunchScreen.storyboard */; };
 		538FE88822CA9BA6005A3836 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 538FE88722CA9BA6005A3836 /* main.m */; };
+		538FE89522CA9E5E005A3836 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 538FE89422CA9E5E005A3836 /* Entry.m */; };
+		538FE89B22CAA2DC005A3836 /* EntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538FE89A22CAA2DC005A3836 /* EntryController.m */; };
+		538FE89E22CAB13F005A3836 /* EntryListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538FE89D22CAB13F005A3836 /* EntryListTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,12 @@
 		538FE88422CA9BA6005A3836 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		538FE88622CA9BA6005A3836 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		538FE88722CA9BA6005A3836 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		538FE89322CA9E5E005A3836 /* Entry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
+		538FE89422CA9E5E005A3836 /* Entry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		538FE89922CAA2DC005A3836 /* EntryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryController.h; sourceTree = "<group>"; };
+		538FE89A22CAA2DC005A3836 /* EntryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntryController.m; sourceTree = "<group>"; };
+		538FE89C22CAB13F005A3836 /* EntryListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryListTableViewController.h; sourceTree = "<group>"; };
+		538FE89D22CAB13F005A3836 /* EntryListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntryListTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +97,8 @@
 		538FE89022CA9C3D005A3836 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				538FE89322CA9E5E005A3836 /* Entry.h */,
+				538FE89422CA9E5E005A3836 /* Entry.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -95,6 +106,8 @@
 		538FE89122CA9C4A005A3836 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				538FE89922CAA2DC005A3836 /* EntryController.h */,
+				538FE89A22CAA2DC005A3836 /* EntryController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -102,6 +115,8 @@
 		538FE89222CA9C6F005A3836 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				538FE89C22CAB13F005A3836 /* EntryListTableViewController.h */,
+				538FE89D22CAB13F005A3836 /* EntryListTableViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -176,8 +191,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				538FE89522CA9E5E005A3836 /* Entry.m in Sources */,
 				538FE88822CA9BA6005A3836 /* main.m in Sources */,
+				538FE89B22CAA2DC005A3836 /* EntryController.m in Sources */,
 				538FE87A22CA9BA5005A3836 /* AppDelegate.m in Sources */,
+				538FE89E22CAB13F005A3836 /* EntryListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +339,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8MJ3MC3A9A;
-				INFOPLIST_FILE = "Journal(ObjC)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Journal(ObjC)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,7 +356,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8MJ3MC3A9A;
-				INFOPLIST_FILE = "Journal(ObjC)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Journal(ObjC)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
