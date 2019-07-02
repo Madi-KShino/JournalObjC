@@ -22,15 +22,20 @@
 }
 
 //CREATE ENTRIES
-- (void)createEntry:(Entry *)entry {
-    
+- (void)createEntry:(NSString *)title body:(NSString *)body {
+    Entry *entry;
+    entry.title = title;
+    entry.body = body;
     [_entries addObject:entry];
 }
 
-//REMOVE ENTRIES
 - (void)removeEntry:(Entry *)entry {
-    
     [_entries removeObject:entry];
+}
+
+- (void)updateWith:(Entry *)entry title:(NSString *)title body:(NSString *)body {
+    entry.title = title;
+    entry.body = body;
 }
 
 @end

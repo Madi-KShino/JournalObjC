@@ -19,11 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 //ARRAY OF ENTRIES PROPERTY
 @property (nonatomic, strong) NSMutableArray* entries;
 
-//CREATE ENTRIES
--(void)createEntry:(Entry *)entry;
-
-//REMOVE ENTRIES
+//CRUD
 -(void)removeEntry:(Entry *)entry;
+-(void)createEntry:(NSString *)title body:(NSString *)body;
+-(void)updateWith:(Entry *)entry title:(NSString *)title body:(NSString *)body;
 
 @end
 

@@ -63,55 +63,56 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUp-RD-fcZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="178" y="123"/>
+            <point key="canvasLocation" x="176.81159420289856" y="122.54464285714285"/>
         </scene>
         <!--Title-->
         <scene sceneID="4y1-em-tIc">
             <objects>
-                <viewController id="CMF-Z1-LqG" sceneMemberID="viewController">
+                <viewController id="CMF-Z1-LqG" customClass="EntryDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r66-BH-NEe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="Dfa-Cq-7zu">
-                                <rect key="frame" x="0.0" y="138" width="414" height="724"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name This Entry..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ma3-fI-V2d">
-                                        <rect key="frame" x="20" y="0.0" width="374" height="60"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="inA-4g-E6t">
-                                        <rect key="frame" x="20" y="105" width="374" height="544"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbb-Eb-mDj">
-                                        <rect key="frame" x="162" y="694" width="90" height="30"/>
-                                        <state key="normal" title="Clear All Text"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="Ma3-fI-V2d" firstAttribute="leading" secondItem="Dfa-Cq-7zu" secondAttribute="leading" constant="20" id="TPr-cW-OHT"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ma3-fI-V2d" secondAttribute="trailing" constant="20" id="bBK-uK-CCE"/>
-                                </constraints>
-                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name This Entry..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ma3-fI-V2d">
+                                <rect key="frame" x="20" y="138" width="374" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CMF-Z1-LqG" id="lMl-5F-2Ga"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="inA-4g-E6t">
+                                <rect key="frame" x="20" y="248" width="374" height="544"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbb-Eb-mDj">
+                                <rect key="frame" x="162" y="832" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Clear All Text"/>
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="CMF-Z1-LqG" eventType="touchUpInside" id="SL3-vb-inF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Dfa-Cq-7zu" firstAttribute="leading" secondItem="3pB-Sv-zfH" secondAttribute="leading" id="5SO-Ab-IOu"/>
-                            <constraint firstItem="3pB-Sv-zfH" firstAttribute="trailing" secondItem="Dfa-Cq-7zu" secondAttribute="trailing" id="fWY-l5-yzv"/>
-                            <constraint firstItem="3pB-Sv-zfH" firstAttribute="bottom" secondItem="Dfa-Cq-7zu" secondAttribute="bottom" id="mPj-Cg-9Wd"/>
-                            <constraint firstItem="Dfa-Cq-7zu" firstAttribute="top" secondItem="3pB-Sv-zfH" secondAttribute="top" constant="50" id="r8A-GW-K0v"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3pB-Sv-zfH"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="eiL-hP-0Wx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="QTO-iR-qNd"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="QTO-iR-qNd">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="CMF-Z1-LqG" id="FhH-jE-Xpr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bodyTextField" destination="inA-4g-E6t" id="d5C-hs-DTe"/>
+                        <outlet property="titleTextField" destination="Ma3-fI-V2d" id="RnO-jv-YxN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wj6-0W-29S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
