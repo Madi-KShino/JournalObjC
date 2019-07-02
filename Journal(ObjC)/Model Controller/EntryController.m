@@ -21,12 +21,19 @@
     return shared;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _entries = [NSMutableArray new];
+    }
+    return self;
+}
+
 //CREATE ENTRIES
 - (void)createEntry:(NSString *)title body:(NSString *)body {
-    Entry *entry;
-    entry.title = title;
-    entry.body = body;
-    [_entries addObject:entry];
+    Entry *newEntry = [[Entry alloc] initWithEntryTitle:title body:body];
+    [_entries addObject:newEntry];
 }
 
 - (void)removeEntry:(Entry *)entry {
